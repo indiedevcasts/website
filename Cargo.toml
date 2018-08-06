@@ -1,0 +1,9 @@
+[package]
+name = "indiedevcasts-website"
+version = "0.1.0"
+authors = ["Julian Didier (theredfish) <did.julian@gmail.com>"]
+
+[dependencies]
+actix = "0.7"
+actix-web = "0.7"
+env_logger = "0.5"

@@ -1,0 +1,84 @@
+p {
+  letter-spacing: -.025em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+a.link {
+  color: rebeccapurple !important;
+  border-bottom: 0.1em dashed rebeccapurple;
+  display: inline;
+}
+
+a.link:hover {
+  font-weight: bold;
+}
+
+.button.is-rebeccapurple {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+.heading {
+  color: rebeccapurple;
+  line-height: 1.4em;
+  text-transform: none;
+}
+
+.logo {
+  font-size: 30px;
+  color: rebeccapurple !important;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.hero.is-white .title {
+  color: #4d545d;
+}
+
+.hero.is-white .subtitle {
+  color: rgba(10, 10, 10, 0.5);
+}
+
+.fa-rocket {
+  color: rebeccapurple;
+}
+
+.title {
+  color: #4d545d;
+}
+
+.subtitle {
+  color: #97a4b1;
+  padding-top: 20px;
+}
+
+.signup-form {
+  margin-top: 50px;
+}
+
+.about {
+  background: #fcfcfc;
+}
+
+.hero.is-primary.is-lightgrey {
+  background: #fbfbfb;
+  /*background-image: linear-gradient(141deg, rebeccapurple 0%, indigo 71%, rebeccapurple 100%);*/
+}
+
+.about {
+  color: #919499 !important;
+}
+
+.hero-title {
+  color: rebeccapurple;
+  font-size: 30px !important;
+}
+
+.label {
+  color: rebeccapurple;
+}
+
+.center {
+  text-align: center;
+}
