@@ -1,4 +1,5 @@
 mod controller;
+mod model;
 
 use actix_web::App;
 use actix_web::http::Method;

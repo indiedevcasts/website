@@ -10,10 +10,6 @@ a.link {
   display: inline;
 }
 
-a.link:hover {
-  font-weight: bold;
-}
-
 .button.is-rebeccapurple {
   color: rebeccapurple;
   font-weight: bold;
