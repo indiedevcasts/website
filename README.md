@@ -1,2 +1,2 @@
 # website
-http://indidevcasts.com
+http://indiedevcasts.com
