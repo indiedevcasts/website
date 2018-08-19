@@ -1,7 +1,10 @@
-use actix_web::{HttpRequest, HttpResponse};
+use actix_web::{http, HttpRequest, HttpResponse, Form, Result};
+use signup::model::SignUp;
 
-pub fn signup(_req: HttpRequest) -> HttpResponse {
-  HttpResponse::Ok()
-    .content_type("application/json")
-    .body("Signup request")
+pub fn signup(params: Form<SignUp>) -> Result<HttpResponse> {
+  println!("Params : {:?}", params);
+  Ok(HttpResponse::build(http::StatusCode::OK)
+    .content_type("text/plain")
+    .body(format!("{:?}", params))
+  )
 }

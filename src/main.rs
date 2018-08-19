@@ -2,6 +2,14 @@ extern crate actix;
 extern crate actix_web;
 extern crate env_logger;
 
+#[macro_use]
+extern crate serde_derive;
+
+// TODO : wait for email validator debug
+// #[macro_use]
+// extern crate validator_derive;
+// extern crate validator;
+
 mod pages;
 mod signup;
 

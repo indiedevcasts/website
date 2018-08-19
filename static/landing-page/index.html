@@ -70,7 +70,7 @@
         <!-- link to the content with a better UX -->
       </div>
       <div class="box container has-text-centered signup-form">
-        <form>
+        <form action="/signup" method="POST">
           <div class="field is-horizontal">
             <div class="field-label is-normal">
               <label class="label">Informations de contact</label>
@@ -78,7 +78,7 @@
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" placeholder="Ton nom ou ton pseudo">
+                  <input class="input" type="text" name="username" placeholder="Ton nom ou ton pseudo">
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -86,7 +86,7 @@
               </div>
               <div class="field">
                 <p class="control is-expanded has-icons-left has-icons-right">
-                  <input class="input is-normal" type="email" placeholder="Ton email">
+                  <input class="input is-normal" type="email" name="email" placeholder="Ton email">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
@@ -103,10 +103,11 @@
               <div class="field is-narrow">
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
-                    <select>
-                      <option>Sans avis</option>
-                      <option>Formation à l'unité</option>
-                      <option>Abonnement (mois)</option>
+                    <select name="training_formula">
+                      <option value="unknown">Sans avis</option>
+                      <option value="pack">Formation à l'unité</option>
+                      <option value="monthly_subscription">Abonnement (mois)</option>
+                      <option value="yearly_subscription">Abonnement (annuel)</option>
                     </select>
                     <span class="icon is-large is-left">
                       <i class="fas fa-money-check-alt"></i>
@@ -114,15 +115,21 @@
                   </div>
                 </div>
               </div>
-              <div class="field has-addons">
-                <p class="control">
-                  <input class="input" type="text" value="19,99">
-                </p>
-                <p class="control">
-                  <a class="button is-static">
-                    €
-                  </a>
-                </p>
+              <div class="field is-narrow">
+                <div class="control has-icons-left">
+                  <div class="select is-fullwidth">
+                    <select name="training_formula">
+                      <option value="15">15</option>
+                      <option value="20" selected="selected">20</option>
+                      <option value="35">35</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option>
+                    </select>
+                    <span class="icon is-large is-left">
+                      <i class="fas fa-euro-sign"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -134,49 +141,49 @@
             <div class="field-body">
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="code-check" type="checkbox" name="code-check">
+                  <input class="is-checkradio is-info is-circle" id="code-check" type="checkbox" name="interest_in_code" value="interest_in_code">
                   <label for="code-check">Code</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="gamedesign-check" type="checkbox" name="gamedesign-check">
+                  <input class="is-checkradio is-info is-circle" id="gamedesign-check" type="checkbox" name="interest_in_game_design" value="interest_in_game_design">
                   <label for="gamedesign-check">Game design</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="leveldesign-check" type="checkbox" name="leveldesign-check">
+                  <input class="is-checkradio is-info is-circle" id="leveldesign-check" type="checkbox" name="interest_in_level_design" value="interest_in_level_design">
                   <label for="leveldesign-check">Level design</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="sounddesign-check" type="checkbox" name="sounddesign-check">
+                  <input class="is-checkradio is-info is-circle" id="sounddesign-check" type="checkbox" name="interest_in_sound_design" value="interest_in_sound_design">
                   <label for="sounddesign-check">Sound design</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="2d-check" type="checkbox" name="2d-check">
+                  <input class="is-checkradio is-info is-circle" id="2d-check" type="checkbox" name="interest_in_2d" value="interest_in_2d">
                   <label for="2d-check">2D</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="3d-check" type="checkbox" name="3d-check">
+                  <input class="is-checkradio is-info is-circle" id="3d-check" type="checkbox" name="interest_in_3d" value="interest_in_3d">
                   <label for="3d-check">3D</label>
                 </p>
               </div>
 
               <div class="field">
                 <p class="control">
-                  <input class="is-checkradio is-info is-circle" id="writing-check" type="checkbox" name="writing-check">
+                  <input class="is-checkradio is-info is-circle" id="writing-check" type="checkbox" name="interest_in_writing" value="interest_in_writing">
                   <label for="writing-check">Ecriture</label>
                 </p>
               </div>
@@ -190,7 +197,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <button class="button is-rebeccapurple is-right">
+                  <button class="button is-rebeccapurple is-right" type="submit">
                     Je m'inscris
                   </button>
                 </div>

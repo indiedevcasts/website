@@ -1,45 +1,14 @@
-enum TrainingFormula {
-  Unknown,
-  Subscription,
-  Pack
-}
-
-pub struct Interests {
-  code: bool,
-  game_design: bool,
-  level_design: bool,
-  sound_design: bool,
-  two_dimension: bool,
-  three_dimension: bool,
-  writting: bool
-}
-
+#[derive(Debug, Deserialize)]
 pub struct SignUp {
-  username: String,
-  email: String,
-  training_formula: TrainingFormula,
-  training_price: f32,
-  interests: Interests
-}
-
-impl Interests {
-  pub fn new() -> Interests {
-    Interests {
-      code: false,
-      game_design: false,
-      level_design: false,
-      sound_design: false,
-      two_dimension: false,
-      three_dimension: false,
-      writting: false
-    }
-  }
-}
-
-fn training_formula_to_string(tf: TrainingFormula) -> &'static str {
-  match tf {
-    TrainingFormula::Unknown => "unknown",
-    TrainingFormula::Subscription => "subscription",
-    TrainingFormula::Pack => "pack"
-  }
+  pub username: String,
+  pub email: String,
+  pub training_formula: String,
+  pub training_price: String,
+  pub interest_in_code: Option<String>,
+  pub interest_in_game_design: Option<String>,
+  pub interest_in_level_design: Option<String>,
+  pub interest_in_sound_design: Option<String>,
+  pub interest_in_2d: Option<String>,
+  pub interest_in_3d: Option<String>,
+  pub interest_in_writing: Option<String>
 }
