@@ -1,9 +1,10 @@
 extern crate actix;
 extern crate actix_web;
 extern crate env_logger;
-
-#[macro_use]
-extern crate serde_derive;
+extern crate serde_qs as qs;
+extern crate futures;
+extern crate percent_encoding;
+#[macro_use] extern crate serde_derive;
 
 // TODO : wait for email validator debug
 // #[macro_use]
