@@ -14,3 +14,7 @@ validator = "0.7.1"
 validator_derive = "0.7.1"
 futures = "0.1.24"
 percent-encoding = "1.0.1"
+askama = "0.7.0"
+
+[build-dependencies]
+askama = "0.7"

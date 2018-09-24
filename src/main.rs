@@ -5,6 +5,7 @@ extern crate serde_qs as qs;
 extern crate futures;
 extern crate percent_encoding;
 #[macro_use] extern crate serde_derive;
+#[macro_use] extern crate askama;
 
 // TODO : wait for email validator debug
 // #[macro_use]
@@ -13,6 +14,7 @@ extern crate percent_encoding;
 
 mod pages;
 mod signup;
+mod util;
 
 use actix_web::{server, App};
 use std::{env};
